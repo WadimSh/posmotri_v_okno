@@ -48,30 +48,9 @@ ol {
   column-gap: 32px;
 }
 
-.search-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 54px;
-}
-
-.content__list {
-  height: 298px;
-  scrollbar-width: none;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: relative;
-}
-
-.content__list::-webkit-scrollbar {
-  width: 0px;
-}
-
-.content__details {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  row-gap: 28px;
+/*  */
+.result {
+  width: 100%;
 }
 
 .result__video-container {
@@ -86,6 +65,105 @@ ol {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+/*  */
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 54px;
+}
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+
+.search-form__fieldset {
+  border: none;
+  min-width: 225px;
+}
+
+.search-form__label {
+  display: flex;
+  width: fit-content;
+  position: relative;
+}
+
+.search-form__textfield {
+  width: 225px;
+  height: 27px;
+  background-color: transparent;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #FFFFFF;
+}
+
+.search-form__textfield::placeholder {
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+  width: 212px;
+}
+
+.search-form__pseudo-checkbox {
+  box-sizing: border-box;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #FFFFFF;
+  margin-right: 5px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/*  */
+.title {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 28px;
+}
+
+.content__list {
+  height: 298px;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.content__list::-webkit-scrollbar {
+  width: 0px;
 }
 
 .content__list-item:not(:last-child) {
@@ -106,24 +184,6 @@ ol {
   height: 103px;
   object-fit: cover;
   object-position: center;
-}
-
-.search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  margin-bottom: 5px;
-}
-
-.title {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 75px;
-  line-height: 94%;
-  text-transform: uppercase;
 }
 
 .content__accent {
@@ -153,84 +213,25 @@ ol {
   line-height: 16px;
 }
 
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
-.search-form__fieldset {
-  border: none;
-  min-width: 225px;
-}
-
-.search-form__label {
-  display: flex;
-  width: fit-content;
-  position: relative;
-}
-
-.search-form__textfield {
-
-  width: 225px;
-height: 27px;
-background-color: transparent;
-border-width: 1px 0px;
-border-style: solid;
-border-color: #FFFFFF;
-
-
-}
-
-.search-form__textfield::placeholder {
-  font-family: 'Fira Sans Condensed';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 22px;
-color: rgba(255, 255, 255, 0.7);
-}
-
-.search-form__checkbox-list {
-  display: flex;
-  gap: 15px;
-  width: 212px;
-}
-
-.search-form__pseudo-checkbox {
-  box-sizing: border-box;
-  width: 19px;
-  height: 19px;
-  border: 1px solid #FFFFFF;
-  margin-right: 5px;
-}
-
+/*  */
 .button {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-background-color: transparent;
-color: #fff;
-border: 1px solid #FFFFFF;
-font-family: 'Fira Sans Condensed';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 22px;
-height: 34px;
-
-
-
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #FFFFFF;
+  font-family: 'Fira Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  height: 34px;
 }
 
 .search-form__submit-button {
   width: 194px;
-  
   align-self: flex-end;
 }
 

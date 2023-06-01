@@ -48,7 +48,7 @@ ol {
   column-gap: 30px;
 }
 
-/*  */
+/* стили для блока сбольшим видео */
 .result {
   width: 100%;
 }
@@ -67,7 +67,7 @@ ol {
   object-position: center;
 }
 
-/*  */
+/* стили для формы */
 .search-form {
   display: flex;
   justify-content: space-between;
@@ -121,6 +121,7 @@ ol {
 }
 
 .search-form__textfield:active {
+  outline: none;
   border: 1px solid #fff;
 }
 
@@ -130,11 +131,12 @@ ol {
 }
 
 .search-form__textfield:focus {
-  border: none;
+  outline: none;
 }
 
-.search-form__textfield:has(:focus-visible) .search-form__label-text {
-  border: 1px solid #fff;
+.search-form__textfield:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__checkbox-list {
@@ -143,12 +145,41 @@ ol {
   width: 212px;
 }
 
+.search-form__checkbox[type="checkbox"]:checked ~ .search-form__pseudo-checkbox::before {
+  content: "";
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  position: absolute;
+  left: 1.5px;
+  top: 1.5px;
+}
+
+.search-form__checkbox[type="checkbox"]:checked ~ .search-form__label-text {
+  text-decoration-line: none;
+}
+
+.search-form__label:hover .search-form__label-text {
+  text-decoration-line: underline;
+}
+
+.search-form__checkbox:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 .search-form__pseudo-checkbox {
   box-sizing: border-box;
   width: 19px;
   height: 19px;
   border: 1px solid #FFFFFF;
   margin-right: 5px;
+  position: relative;
 }
 
 .visually-hidden {
@@ -161,7 +192,7 @@ ol {
   white-space: nowrap;
 }
 
-/*  */
+/* стили для блока с карточками */
 .title {
   font-family: 'Oswald';
   font-style: normal;
@@ -194,6 +225,10 @@ ol {
   margin-bottom: 34px;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
+
 .content__video-card {
   display: flex;
   justify-content: space-between;
@@ -217,6 +252,21 @@ ol {
 .content__card-link {
   color: #fff;
   text-decoration: none;
+  display: block;
+  margin: 2px;
+}
+
+.content__card-link:hover {
+  text-decoration-line: underline;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .content__video-card-title {
@@ -237,7 +287,7 @@ ol {
   line-height: 16px;
 }
 
-/*  */
+/* стили для кнопок */
 .button {
   box-sizing: border-box;
   display: flex;
@@ -264,8 +314,8 @@ ol {
 }
 
 .button:focus-visible {
-  
-
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__submit-button {

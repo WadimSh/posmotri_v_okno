@@ -91,6 +91,8 @@ ol {
 
 .search-form__label {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: fit-content;
   position: relative;
   cursor: pointer;
@@ -145,15 +147,14 @@ ol {
   width: 212px;
 }
 
-.search-form__checkbox[type="checkbox"]:checked ~ .search-form__pseudo-checkbox::before {
-  content: "";
+.search-form__checkbox[type="checkbox"]:checked ~ .search-form__pseudo-checkbox {
   box-sizing: border-box;
   width: 15px;
   height: 15px;
   background-color: #fff;
-  position: absolute;
-  left: 1.5px;
-  top: 1.5px;
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+  margin-right: 9px;
 }
 
 .search-form__checkbox[type="checkbox"]:checked ~ .search-form__label-text {
@@ -179,7 +180,6 @@ ol {
   height: 19px;
   border: 1px solid #FFFFFF;
   margin-right: 5px;
-  position: relative;
 }
 
 .visually-hidden {

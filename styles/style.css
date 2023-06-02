@@ -76,7 +76,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -105,7 +105,7 @@ ol {
   border-width: 1px 0px;
   border-style: solid;
   border-color: #FFFFFF;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -114,7 +114,7 @@ ol {
 }
 
 .search-form__textfield::placeholder {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -194,7 +194,7 @@ ol {
 
 /* стили для блока с карточками */
 .title {
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 75px;
@@ -213,7 +213,6 @@ ol {
   height: 298px;
   scrollbar-width: none;
   overflow-y: scroll;
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -232,17 +231,17 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .content__video-card-description-container {
-  width: 100%;
+  flex-grow: 1;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
   object-fit: cover;
-  object-position: center;
 }
 
 .content__accent {
@@ -270,7 +269,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -280,7 +279,7 @@ ol {
 }
 
 .content__video-card-description {
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -296,7 +295,7 @@ ol {
   background-color: transparent;
   color: #fff;
   border: 1px solid #FFFFFF;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
